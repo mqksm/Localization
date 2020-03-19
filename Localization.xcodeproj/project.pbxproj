@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF118BA924236F9C00CC95F0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF118BA824236F9C00CC95F0 /* CoreLocation.framework */; };
 		EFBE35D0241C01A20089403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE35CF241C01A20089403A /* AppDelegate.swift */; };
 		EFBE35D2241C01A20089403A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE35D1241C01A20089403A /* SceneDelegate.swift */; };
 		EFBE35D4241C01A20089403A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE35D3241C01A20089403A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF118BA824236F9C00CC95F0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EFBE35CC241C01A20089403A /* Localization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBE35CF241C01A20089403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFBE35D1241C01A20089403A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF118BA924236F9C00CC95F0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF118BA724236F9C00CC95F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF118BA824236F9C00CC95F0 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EFBE35C3241C01A20089403A = {
 			isa = PBXGroup;
 			children = (
 				EFBE35CE241C01A20089403A /* Localization */,
 				EFBE35CD241C01A20089403A /* Products */,
+				EF118BA724236F9C00CC95F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
