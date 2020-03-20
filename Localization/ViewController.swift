@@ -42,12 +42,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         geocoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) in
             guard let placemark = placemarks?.last else { return }
-            let country = String(placemark.country ?? "")
-            let city = String(placemark.locality ?? "")
-            let city2 = String(placemark.subLocality ?? "")
-            let street = String(placemark.thoroughfare ?? "")
-            let house = String(placemark.subThoroughfare ?? "")
-            let adrress = country + ", " + city + ", " + city2 + ", " + street + ", " + house
+            var adrress = ""
+            if let country = placemark.country {
+                adrress += country + ", "
+            }
+            if let city = placemark.locality {
+                adrress += city + ", "
+            }
+            if let city2 = placemark.subLocality {
+                adrress += city2 + ", "
+            }
+            if let street = placemark.thoroughfare {
+                adrress += street + ", "
+            }
+            if let house = placemark.subThoroughfare {
+                adrress += house
+            }
             self.currentAddressLabel.text = adrress
         }
         
