@@ -17,7 +17,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
-    @IBOutlet weak var AltitudeLabel: UILabel!
+    @IBOutlet weak var altitudeLabel: UILabel!
     @IBOutlet weak var currentAddressLabel: UILabel!
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //            let coords = [ "latitude": currentLocation.coordinate.latitude, "longitude": currentLocation.coordinate.longitude, "altitude": currentLocation.altitude, "horizontalAccuracy": currentLocation.horizontalAccuracy, "verticalAccuracy": currentLocation.verticalAccuracy]
         latitudeLabel.text = String(format:"%.8f", currentLocation.coordinate.latitude)
         longitudeLabel.text = String(format:"%.8f", currentLocation.coordinate.longitude)
-        AltitudeLabel.text = String(format:"%.8f", currentLocation.altitude)
+        altitudeLabel.text = String(format:"%.8f", currentLocation.altitude)
         
         geocoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) in
             guard let placemark = placemarks?.last else { return }
